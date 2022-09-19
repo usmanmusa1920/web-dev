@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   <textarea id="area"> Type your message... </textarea>
+   <p> Click the <b>textarea</b> then click outside to see the effect. </p>
+   <h1 id="pp"></h1>
+   
+   <input type="text" name="in" id="Password" placeholder="Password" />
+   
+   <input type="text" name="in" id="Passwordw" onkeyup="kp(this)" placeholder="Password again" />
+
+   <script>
+   
+   p = document.getElementById('Password')
+   ppp = document.getElementById('Passwordw').value
+   
+   function kp(elem){
+     if (elem.value != p.value || p.value != elem.value){
+       document.getElementById('pp').innerText = 'wrong password'
+     }
+     
+     else{
+       document.getElementById('pp').innerText = 'Good password'
+     }
+   }
+   
+      var area = document.getElementById("area");
+      
+      area.addEventListener("focus", function() {
+         area.style.cssText = "background:yellow";
+      });
+      
+      area.addEventListener("blur", function() {
+          area.style.background = "white";
+      });
+   </script>
+</body>
+</html>

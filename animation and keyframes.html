@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		CSS Animation and @Keyframes Property
+	</title>
+	
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			margin: 200px;
+			border-radius: 100px;
+			background-color: red;
+			animation: circle 8s infinite;
+		}
+
+		@keyframes circle {
+			0% {
+				background-color: red;
+			}
+
+			25% {
+				background-color: yellow;
+			}
+
+			50% {
+				background-color: blue;
+			}
+
+			100% {
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+
+</html>

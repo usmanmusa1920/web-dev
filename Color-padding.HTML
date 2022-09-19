@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+   <style type="text/css">
+      div {
+         height: 200px;
+         line-height: 200px;
+         color: white;
+         text-align: center;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+   </style>
+</head>
+<body>
+   <div onclick="changeColor(this)" style="background-color: blue;">
+      Tap me to change my color!
+   </div>
+
+   <script>
+      function changeColor(elemnt) {
+         var currentColor = elemnt.style.backgroundColor;
+         if(currentColor == "red") {
+            elemnt.style.backgroundColor = "green";
+         } else {
+            elemnt.style.backgroundColor = "red"; 
+         }
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+    <title>My job</title>
+    <style type="text/css" media="all">
+      body{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    
+  </head>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+
+<p>The unshift() method adds new elements to the beginning of an array.</p>
+
+<p id="demo"></p>
+
+<!-- item2 -->
+<textarea name="item" id="item2" placeholder="Insert an item2 ..." rows="8" cols="40"></textarea>
+<!-- <input type="text" name="item" id="item2" placeholder="Insert an item2 ..."/> -->
+<button onclick="myFunction2()">Add tag</button>
+
+<br />
+<br />
+
+<button type="submit" id="btn" onclick="myFunction3(this)" value="<h1 style='color:black; background:transparent; text-decoration:none'></h1>">h1</button>
+<button type="submit" id="btn" onclick="myFunction3(this)" value="<p style='color:black; background:transparent; text-decoration:none'></p>">p</button>
+<button type="submit" id="btn" onclick="myFunction3(this)" value="<small style='color:black; background:transparent; text-decoration:none'></small>">small</button>
+<button type="submit" id="btn" onclick="myFunction3(this)" value="<span style='color:black; background:transparent; text-decoration:none'></span>">span</button>
+<button type="submit" id="btn" onclick="myFunction3(this)" value="<a href='#' style='color:black; background:transparent; text-decoration:none'></a>">anchor</button>
+<button type="submit" id="btn" onclick="myFunction3(this)" value="</br>">br</button>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+for (let i=0; i<fruits.length; i++){
+  console.log(fruits[i])//.replace(',', '')
+}
+
+vf = fruits.join(' ')
+
+document.getElementById("demo").innerHTML = vf;
+
+i2 = document.getElementById('item2')
+
+function myFunction2() {
+  fruits.push(i2.value);
+  document.getElementById("demo").innerHTML = fruits.join(' ');
+}
+
+function myFunction3(elem){
+  document.getElementById("item2").value = elem.value;
+  iter.forEach(
+    item2.push(iter.value))
+}
+</script>
+
+</body>
+</html>

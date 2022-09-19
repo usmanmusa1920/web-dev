@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title></title>
+  </head>
+  <body>
+    <form id="mainForm" name="mainForm">
+      <input type="radio" name="gender" value="Male" checked/>Male
+      <input type="radio" name="gender" value="Female" />Female
+      <input type="radio" name="gender" value="Others" />Others
+    </form>
+    <span id="result"></span>
+    <script type="text/javascript" charset="utf-8">
+    document.mainForm.onclick = function(){
+      var gender = document.querySelector('input[name = gender]:checked').value;
+      result.innerHTML = 'Your Gender: '+gender;
+    }
+    </script>
+  </body>
+</html>
