@@ -1,0 +1,332 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background: lightgrey;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.head{
+  width: 100%;
+  height: 12vh;
+  background: navy;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.head_column{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left_head{
+  width: 20%;
+}
+
+@media only screen and (max-width: 700px){
+  .left_head{
+    width: 100%;
+  }
+}
+
+.left_head h2{
+  color: white;
+}
+
+.right_head{
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right_head a{
+  color: white;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 700px){
+  .right_head a{
+    display: none;
+  }
+
+  #sign{
+    display: block;
+  }
+}
+
+.main{
+  margin-top: 13vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 700px){
+  .main{
+    display: flex;
+  }
+}
+
+.main_column{
+  background: white;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 700px){
+  .main_column{
+    flex-direction: column;
+  }
+}
+
+.left_main{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 700px){
+  .left_main{
+    display: none;
+  }
+}
+
+.left_main h1{
+  text-align: center;
+  padding: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 9px;
+  box-shadow: 0 0px 7px dodgerblue, 0 0px 7px dodgerblue;
+  color: dodgerblue;
+}
+
+.p_note{
+  font-size: large;
+  font-style: oblique;
+  text-align: center;
+  font-weight: bold;
+  font-stretch: condensed;
+  color: brown;
+}
+
+.p_sub{
+  font-size: large;
+  font-style: oblique;
+  text-align: center;
+}
+
+.left_main img{
+  width: 300px;
+  height: 300px;
+}
+
+.right_main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding-top: 3px;
+}
+
+@media only screen and (max-width: 700px){
+  .right_main{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
+.right_main h1{
+  text-align: center;
+  padding: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 9px;
+  box-shadow: 0 0px 7px lightgrey, 0 0px 7px lightgrey;
+  color: rgb(2, 2, 51);
+}
+
+.right_main p{
+  font-size: large;
+  font-style: oblique;
+  text-align: center;
+  font-weight: bold;
+  font-stretch: condensed;
+  color: brown;
+}
+
+.right_main form{
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.right_main form h2{
+  color: dodgerblue;
+}
+
+.right_main form input{
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 100%;
+  padding: 5px;
+  margin: 3px;
+}
+
+.right_main form button{
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background: green;
+  margin: 3px;
+  height: 30px;
+  width: 50%;
+  color: white;
+}
+
+.right_main form p a{
+  color: darkgreen;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.right_main form p a:hover{
+  color: dodgerblue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  margin-top: 5px;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 20px 0;
+}
+  
+/* Hiding scrollbar for chrome, safari and opera */
+.footer::-webkit-scrollbar{
+  display: none;
+}
+
+/* Hiding scrollbar for IE, Edge and firefox */
+.footer{
+  -ms-overflow-style: none; /*IE and Edge */
+  scrollbar-width: none; /*firefox */
+}
+
+.f_column{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 700px){
+  .f_column{
+    flex-direction: column;
+  }
+}
+
+.f_column p{
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.f_left p a{
+  color: darkorange;
+  font-size: large;
+  font-style: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.f_left p a:hover{
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+.f_right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 700px){
+  .f_right{
+    margin-top: 7px;
+  }
+}
+
+.f_right form input{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 30px;
+  padding: 7px;
+}
+
+@media only screen and (max-width: 700px){
+  .f_right form input{
+    margin-bottom: 1px;
+  }
+}
+
+.f_right form button{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: lightgrey;
+  color: black;
+  height: 30px;
+  padding: 7px;
+  margin-bottom: 3px;
+}
+
+.f_right button{
+  border: none;
+  outline: none;
+  background-color: dodgerblue;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.f_right button a{
+  color: white;
+}
