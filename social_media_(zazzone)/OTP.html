@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-scale, initial-scale=1.0">
+    <title></title>
+    <style>
+      body{
+        background-color: rgba(144,60,86,0.408);
+        margin: 0px;
+        padding: px;
+      }
+
+      .h1{
+        margin: 0px;
+        padding: 5px;
+        background-color: #903C56;
+        color: white
+      }
+
+      .i1{
+        float: right;
+        margin-right: 5px;
+        margin-bottom: 30px;
+      }
+
+      .i1 button{
+        background-color: #7fcf99;
+        margin-bottom: 30px;
+        color: black;
+        border-color: transparent;
+        border-radius: 9px;
+      }
+
+      .div_1{
+        background-color: transparent;
+        border-radius: 9px;
+        border: solid 1px #4a524a;
+        margin: 9px;
+      }
+
+      .div_1 center{
+        background-color: #cc869c;
+        color: #903C56;
+        font-style: italic;
+        border-radius: 9px 9px 0px 0px;
+        padding-left: 5px;
+      }
+
+      .div_2{
+        padding: 15px;
+        margin: 5px;
+      }
+
+      .div_2 p{
+        color: #903C56;
+        font-style: italic;
+        text-align: center;
+      }
+
+      .s_id{
+        color: green;
+      }
+
+      .c_entr{
+        color: black;
+        font-style: normal;
+      }
+
+      .div_2 form{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .otp{
+        width: 80%;
+        border-radius: 15px;
+        height: 30px;
+        border: none;
+        outline: none;
+        padding: 9px;
+        float: left;
+        height: 30px;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+
+      .btn{
+        background-color: #903C56;
+        color:  white;
+        border:  1px;
+        border-radius: 15px;
+        float: left;
+        width: 90%;
+        height: 30px;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 15px;
+
+      }
+
+      .resend{
+        color: dodgerblue;
+        background: white;
+        padding: 7px;
+        margin-top: 5px;
+        border-radius: 3px;
+        font-style: normal;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="h1">
+      <i>Zazzone</i>
+      <i class="i1"> <button type="submit">confirming your account...</button></i>
+    </h1>
+    <div class="div_1">
+      <center>
+        Account confirmation!
+      </center>
+      <div class="div_2" >
+        <p>
+          <small>Hi <b>Usman Musa</b> your zazzone id is <b class="s_id" > 308usman580</b> keep it away from public and also well secured.</small>
+          <br />
+          <br />
+          <small>We have sent you an OTP code to your phone number that ending in xxxxxxx2264.</small>
+          <br />
+          <br />
+          <small class="c_entr" >Enter the six OTP code number sent to you in the field below!</small>
+        </p>
+        <form action="#" method="POST" accept-charset="utf-8">
+          <input class="otp" type="text" max="6" min="6" name="otp" id="otp" placeholder="OTP code" />
+          <input type="submit" name="submit" id="submit" onclick="otpfunc()" value="Proceed" class="btn" />
+          <br>
+          <small class="resend" >Click me to resend OTP code, if not received.</small>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+      div = document.getElementById('divc1')
+      function otpfunc(){
+        window.alert('Your OTP is under processing!')
+      }
+    </script>
+  </body>
+</html>

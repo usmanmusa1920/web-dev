@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<!--css #c47777 -->
+    <style type="text/css" media="all">
+      body {
+        background-color:#903C56;
+      }
+      
+      .b_1{
+        background-color: #cc869c;
+        border-radius: 9px;
+        width: 50px;
+        color: #903C56;
+        border: none;
+      }
+
+      .b_2{
+        float: right;
+        color: white;
+        border: none;
+        background-color: #cc869c;
+        border-radius: 9px;
+        margin-right: 2px;
+      }
+
+      .p-1{
+        border-radius: 9px;
+        background-color: white;
+        overflow: auto;
+        white-space: nowrap;
+        height: 22px;
+      }
+
+      .p-1 a{
+        color: #903C56;
+      }
+
+      #select-1{
+        border: none;
+      }
+
+      #select-2{
+        border: none;
+      }
+
+      .quick-media{
+        border: none;
+      }
+
+      .create-form{
+        float: left;
+      }
+
+      .create-btn{
+        background-color: #cc869c;
+        border-radius: 9px;
+        color: white;
+        border: none;
+        width: 140px;
+      }
+
+      #login-form{
+        float: right;
+      }
+
+      #login-btn{
+        color: #903C56;
+        border: none;
+        width: 140px;
+      }
+
+      #forgotten-password-form{
+        float: right;
+        display: none;
+      }
+
+      #button-forgotten-password{
+        border: none;
+        border-radius: 9px;
+        background-color: black;
+        color: white;
+      }
+
+      .Blog{
+        color: white;
+        float: left;
+      }
+
+      .pro-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        float: right;
+      }
+
+      #div-6{
+        display: none;
+      }
+
+      #div-6{
+        color: white;
+        font-style: italic;
+      }
+
+      .login-form{
+        display: flex;
+        width: auto;
+      }
+
+      #Blog-id-or-phone{
+        padding-left: 3px;
+        width: 40%;
+      }
+
+      #login-password{
+        padding-left: 3px;
+        width: 40%;
+      }
+
+      .login-login-btn{
+        width: 20%;
+      }
+
+      .div-7 p{
+        color: white;
+      }
+
+      .field-1{
+        border-radius: 9px;
+        border: none;
+        background-color: white;
+        height: 30px;
+      }
+
+      .search-engine{
+        margin-top: 7px;
+      }
+
+      #search-engine{
+        border-radius: 9px;
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        width: 80%;
+        outline: none;
+      }
+
+      .search-engine-btn{
+        border-radius: 9px;
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        width: 15%;
+        float: right;
+      }
+
+      .div-8 img{
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+      }
+
+      .div-9 center form p{
+        color: white;
+        font-family: sans-serif;
+        font-style: italic;
+        border-radius: 9px;
+        border: none;
+      }
+    </style>
+</head>
+
+<!--Html-->
+  <body>
+    <div class="container">
+      <div class="div-1">
+        <button class="b_1" href="Menu"> Menu </button>
+        <button class="b_2" href="Policy"> Terms and Policy </button>
+      </div>
+      <div class="div-2">
+        <p class="p-1">
+          <a href="#">All</a>
+          <a href="#">Image</a>
+          <a href="#">Video</a>
+          <a href="#">News</a>
+          <a href="#">Education</a>
+          <a href="#">Sports</a>
+          <a href="#">Politics</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Tools</a>  
+          <a href="#">Base</a>
+          <a href="#">Custom</a>
+          <a href="#">More</a>
+          <a href="#">Logo</a>
+          <a href="#">Friends</a>
+          <a href="#">Partners</a>
+          <a href="#">People</a>
+          <a href="#">Work</a>
+          <a href="#">More...</a>
+        </p>
+      </div>
+      <div class="div-3">
+        <select id="select-1">
+          <option value="Any time"> Any time </option>
+          <option value="This week"> This week </option>
+          <option value="Last week"> Last week </option>
+          <option value="This month"> This year </option>
+          <option value="Last month"> Last month </option>
+          <option value="Last year"> Last year </option>
+          <option value="Custom"> Custom </option>
+        </select>
+        <select name="select-2" id="select-2">
+          <option value="Everywhere">Everywhere</option>
+          <option value="Africa">Africa</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Asia">Asia</option>
+          <option value="Australia">Australia</option>
+          <option value="Europe">Europe</option>
+          <option value="North america">North america</option>
+          <option value="South america">South america</option>
+        </select>
+        <button class="quick-media" type="submit">Quick media</button>
+      </div>
+      <hr />
+      <div class="div-4">
+        <form class="create-form" action="" method="post" accept-charset="utf-8">
+          <button class="create-btn" type="submit">create</button>
+        </form>
+        <form id="login-form" action="" method="post" accept-charset="utf-8">
+          <button id="login-btn" onclick="fff()" type="submit">login</button>
+        </form>
+        <form id="forgotten-password-form" action="" method="get" accept-charset="utf-8">
+          <button id="button-forgotten-password" type="submit">forgotten password?</button>
+        </form>
+      </div>
+      <br />
+      <br />
+      <div class="div-5">
+        <h1 class="Blog">Blog</h1>
+        <img class="pro-img" src="image/Usman.jpg" alt="profile-image/user.jpg" />
+        <br />
+      </div>
+      <br />
+      <br />
+      <br />
+      <div id="div-6">
+        <p>log in to my account</p>
+        <form class="login-form" action="" method="post" accept-charset="utf-8">
+          <input type="text" name="Blog-id-or-phone" id="Blog-id-or-phone" placeholder="Blog id or phone" />
+          &nbsp;&nbsp;
+          <input type="password" name="login-password" id="login-password" placeholder="password" />
+          &nbsp;&nbsp;
+          <button class="login-login-btn" type="submit">login</button>
+        </form>
+      </div>
+      <div class="div-7">
+        <p>
+          Touch the world with Blog for good access to your favorite destinations! <br />
+          Explore the universe! <br />
+          Chat, cloud storage, cloud computing, ride/hailing, etc <br /> <br />
+        </p>
+        <p>Explore our Blog search engine</p>
+        <fieldset class="field-1">
+          <form class="search-engine" action="" method="get" accept-charset="utf-8">
+            <input type="search" name="search-engine" id="search-engine" placeholder="Explore Blog" />
+            <button class="search-engine-btn" type="submit">Go</button>
+          </form>
+        </fieldset> <br />
+      </div>
+      <div style="text-align:center" class="div-8">
+        <img class="img" src="image/web cam.jpg" alt="" />
+        <img class="img" src="image/locations.jpg" alt="" />
+        <img class="img" src="image/places.jpg" alt="" />
+        <img class="img" src="image/religions.jpg" alt="" />
+        <img class="img" src="image/apps.jpg" alt="" />
+        <img class="img" src="image/books.jpg" alt="" />
+      </div>
+      <div class="div-9">
+        <center>
+          <form action="help.html" method="get" accept-charset="utf-8">
+            <p>All right reserve Blog © 2021 <input type="submit" name="help" id="help" value="Help" /></p>
+          </form>
+        </center>
+      </div>
+    </div>
+    <!--JavaScript-->
+    <script type="text/javascript" charset="utf-8">
+        function fff(){
+          document.getElementById('login-form').style.display = 'none';
+          document.getElementById('div-6').style.cssText = 'display:block'
+          document.getElementById('forgotten-password-form').style.display = 'block';
+        }
+    </script>
+  </body>
+</html>

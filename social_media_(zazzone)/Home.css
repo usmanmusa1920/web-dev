@@ -1,0 +1,351 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  width: 100%;
+}
+
+.header{
+  background-color: #903C56;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mainhead{
+  height: 10%;
+}
+
+.onehead{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 55px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  border-radius: 0px 20px;
+}
+
+.midhead{
+  width: 70%;
+  height: 100%;
+}
+
+.searchform{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#search{
+  outline: none;
+  width: 74%;
+  border: none;
+  border-radius: 3px;
+}
+
+.searchbtn{
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  width: 25%;
+}
+
+.notification{
+  background-color: white;
+  color: #903C56;
+  border-radius: 9px;
+  font-family: cursive;
+  font-style: italic;
+}
+
+.profilepic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.button{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button a {
+  position: relative;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  font-family: Times New Roman;
+  font-size: 15px;
+  margin: 4px;
+  padding: 1px 3px;
+  background: transparent;
+}
+
+.button a #badge {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  padding: 0px 5px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+}
+
+.button a:hover{
+  color: white;
+  border-radius: 5px;
+  background: #cc869c;
+}
+
+.headfoot{
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  width: 100%;
+}
+
+.field{
+  width: 45%;
+  height: 15px;
+  border: none;
+  background-color: white;
+  margin-bottom: 3px;
+  border-radius: 9px;
+  width: 46%;
+}
+
+.leftdiv{
+  width: 46%;
+  margin-right: 3px;
+}
+
+.fieldimg{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.fieldinput{
+  color: black;
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+  font-size: 7px;
+  line-height: 20px;
+  outline: none;
+  border: none;
+}
+
+.barimg{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 3px;
+}
+
+#arrowup{
+  display: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 3px;
+}
+
+.quickbtn{
+  border: none;
+  float: right;
+  margin-right: 3px;
+  color: #903C56;
+  border-radius: 9px;
+  background-color: #cc869c;
+  outline: none;
+}
+
+.quickbtn:hover{
+  color: #903C56;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.enginebtn{
+  border: none;
+  float: right;
+  margin-right: 3px;
+  color: #903C56;
+  border-radius: 9px;
+  background-color: #cc869c;
+  outline: none;
+}
+
+.enginebtn:hover{
+  color: #903C56;
+  border-radius: 9px;
+  background-color: white;
+}
+
+.bar{
+  margin-top: 127px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-right: 0;
+  display: none;
+}
+
+.topbar{
+  width: 99%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.topleft{
+  width: 23%;
+  background-color: darkgrey;
+  text-align: center;
+}
+
+.simimg{
+  width: 60px;
+  height: 80px;
+  margin-left: 3px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.topmid{
+  width: 50%;
+  background-color: darkgrey;
+  text-align: center;
+}
+
+.barmidbtn{
+  justify-content: space-around;
+  display: flex;
+}
+
+.topright{
+  width: 25%;
+  background-color: darkgrey;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.mapimg{
+  width: 60px;
+  height: 80px;
+  margin-left: 3px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.spanbar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.midbar{
+  background-color: grey;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.midbar button{
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.midbar button:hover{
+  background-color: white;
+  color: #903C56;
+  border: none;
+  border-radius: 3px;
+}
+
+.baricon{
+  background-color: white;
+  color: grey;
+  position: fixed;
+}
+
+.mainbar{
+  background-color: lightgrey;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main{
+  width: 100%;
+  margin-top: 126px;
+}
+
+.mainp{
+  background-color: #cc869c;
+  padding: 5px;
+  margin-top: 1px;
+}
+
+.mainimg{
+  width: 40px;
+  height: 40px;
+  border: solid #903C56 1px;
+  border-radius: 50px;
+  padding: 3px;
+}
+
+.mainspan{
+  color: white;
+}
+
+.maininfo{
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.content{
+  margin: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.mainvid{
+  width: 100%;
+  height: 40vh;
+  z-index: -100px;
+}
+
+.maindown{
+  background-color: #cc869c;
+  padding: 10px;
+  height: 20px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.foot{
+  margin: 3px;
+}
