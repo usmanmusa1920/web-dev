@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  outline:0;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 15px;
+  font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans", Times 'Segoe UI', Tahoma, Verdana, sans-serif, serif,Verdana,Arial,sans-serif;
+  background: hsl(0, 0%, 100%, 1);
+}
+
+.head{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3px;
+  padding: 10px;
+  align-items: center;
+  border-top: dashed 1px black;
+  border-bottom: dashed 1px black;
+  background: lightgrey;
+}
+
+.head a{
+  color: black;
+  text-decoration: none;
+  border-bottom: solid grey 1px;
+  margin: 0 2px 5px 2px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.head a:hover{
+  color: black;
+  background: white;
+  padding: 10px;
+  transition-duration: 0.5s;
+}
+
+.container{
+  width: 100%;
+  min-height: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img{
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.links{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links h1{
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.links p{
+  margin: 10px 10px 0 10px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.links p a{
+  color: black;
+  margin: 5px;
+  text-decoration: none;
+  border-bottom: solid darkgrey 1px;
+  padding: 5px;
+  line-height: 30px;
+}
+
+.links p a:hover{
+  color: white;
+  background: black;
+  padding: 10px;
+  transition: linear;
+  transition-duration: 0.4s;
+}
+
+/* mostly for other pages*/
+.paragraph{
+  width: 100%;
+  min-height: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 150px 0 150px;
+}
+
+@media only screen and (max-width: 700px){
+  .paragraph{
+    padding: 10px;
+  }
+}
+
+.paragraph h3{
+  margin: 20px;
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  background: #393939;
+  color: white;
+  width: fit-content;
+}
+
+.paragraph p{
+  margin: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 30px;
+}
+
+.paragraph p a{
+  color: black;
+}
+
+.paragraph p a:hover{
+  background: grey;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+.paragraph p b{
+  font-weight: bolder;
+  border-bottom: solid grey 1px;
+}
