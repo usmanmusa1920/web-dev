@@ -1,0 +1,46 @@
+.head_right a{
+  display: none;
+}
+
+.box{
+  margin-top: 12vh;
+  background:  lightgrey;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.box h1{
+  color: black;
+  margin-top: 0;
+  font-style: normal;
+}
+
+#auth{
+  background: white;
+}
+
+#auth h1{
+  color: white;
+  background: green;
+  padding: 5px;
+}
+
+#auth input, #auth textarea{
+  background: lightgrey;
+}
+
+#auth p{
+  color: grey;
+}
+
+#auth button{
+  background: dodgerblue;
+}
+
+.main{
+  display: none;
+}
+
+.footer{
+  margin-top: 10px;
+}

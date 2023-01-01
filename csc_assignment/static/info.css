@@ -1,0 +1,90 @@
+.head_right{
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 700px){
+  .head_right{
+    justify-content: flex-end;
+  }
+}
+
+.head_right a{
+  display: none;
+}
+
+.mini{
+  margin-top: 12vh;
+  background: url('/static/media/origin.jpg') no-repeat center center/cover;
+}
+
+#search{
+  background: white;
+  padding: 25px 15px;
+}
+
+@media only screen and (max-width: 700px){
+  #search{
+    padding: 15px 10px;
+  }
+}
+
+#search input, #search button{
+  height: 40px;
+}
+
+.main{
+  margin-top: 0;
+}
+
+.list{
+  border-top: solid grey 12px;
+  width: 100%;
+  background: white;
+  padding: 0 20px 20px 20px;
+  margin: 15px 0;
+}
+
+.list h1{
+  color: green;
+}
+
+.list ul{
+  margin-left: 12px;
+}
+
+.list ul p{
+  border-top: solid 1px lightgrey;
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
+.list ul p a{
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+.list ul p a span{
+  color: green;
+  text-decoration: none;
+}
+
+.in_side{
+  border-top: solid grey 12px;
+  border-bottom: solid wheat 12px;
+  width: 100%;
+  background: white;
+  padding: 5px;
+  margin: 15px 0;
+}
+
+.in_side form{
+  display: flex;
+}
+
+.in_side_h1{
+  font-weight: lighter;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: solid 3px lightgrey;
+  margin-bottom: 30px;
+}

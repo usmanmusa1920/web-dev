@@ -1,0 +1,59 @@
+/* hiding the search bar */
+.search{
+  display: none;
+}
+
+@media only screen and (max-width: 700px){
+  .mini{
+    min-height: 70vh;
+  }
+
+  .mini_column{
+    width: 90%;
+    height: 60vh;
+    padding: 0;
+  }
+}
+
+.box h1{
+  padding: 0 30px;
+}
+
+@media only screen and (max-width: 700px){
+  .box h1{
+    font-size: 1.5rem;
+  }
+
+  .box h3{
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  .box_in{
+    width: 90vw;
+    height: fit-content;
+  }
+}
+
+/* .header{
+  background: black;
+}
+
+.header_col a{
+  color: white;
+}
+
+#mini{
+  margin-top: 12vh;
+  background: url('./media/back.jpg') no-repeat center center/cover;
+}
+
+@media only screen and (max-width: 700px){
+  #mini{
+    height: 70vh;
+  }
+}
+
+.main{
+  margin-top: 3px;
+} */

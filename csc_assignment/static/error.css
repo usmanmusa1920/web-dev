@@ -1,0 +1,55 @@
+.head_right a{
+  display: none;
+}
+
+.box{
+  margin-top: 12vh;
+  background:  lightgrey;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.box h1{
+  color: black;
+  margin-top: 0;
+  font-style: normal;
+}
+
+.side_left{
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: dodgerblue;
+}
+
+#auth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: dodgerblue;
+}
+
+#auth h1{
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 3rem;
+  font-style: oblique;
+  width: 100%;
+}
+
+#auth p{
+  color: white;
+  text-align: center;
+  font-style: oblique;
+  width: 100%;
+}
+
+.main{
+  margin-top: 0;
+}
+
+.footer{
+  margin-top: 10px;
+}

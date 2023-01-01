@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="static/media/me_1.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="static/base.css">
+  <script src="static/js/base.js"></script>
+  <link rel="stylesheet" href="static/blogs.css">
+  <title>Usman Musa | CSC</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header_col">
+        <div class="head_left">
+          <h1>
+            <a href="https://usmanmusa1920.github.io">Usman Musa</a>
+          </h1>
+        </div>
+  
+        <div class="head_right">
+          <form action="#" method="get" class="search">
+            <input type="search" name="search_q" placeholder="Search here" required>
+            <button type="submit">Search</button>
+          </form>
+  
+          <a href="#">Portfolio</a>
+          <a href="https://drive.google.com/file/d/16ovVlyWCq5M-leEi3VYPS2pfVCQRW0HH/view?usp=sharing">Résumé</a>
+          <a href="#">Articles</a>
+          <a href="https://github.com/usmanmusa1920">Github</a>
+          <a href="https://linkedin.com/in/usmanmusa1920">Linkedin</a>
+          <a onclick="showMenu()" id="menu_img">
+            <img src="static/media/show_menu_wht_bg.png" alt="" >
+          </a>
+          <a class="times" onclick="hideMenu()">&times;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="menu_col">
+        <div class="null" onclick="hideMenu()"></div>
+        <div class="list" id="menu">
+          
+          <form action="#" method="get" id="search">
+            <input type="search" name="search_q" placeholder="Search here" required>
+            <button type="submit">Search</button>
+          </form>
+
+          <div class="in_menu">
+            <p><a href="#">Articles</a></p>
+            <p><a href="#">About</a></p>
+            <p><a href="https://drive.google.com/file/d/16ovVlyWCq5M-leEi3VYPS2pfVCQRW0HH/view?usp=sharing">Résumé</a></p>
+          </div>
+          <br>
+
+          <div class="in_menu">
+            <h1>Articles:</h1>
+              <p><a>HTML, CSS &amp; JS web development</a></p>
+              <p><a>Linux / Unix like OS &amp; Bash shell</a></p>
+              <p><a>Problem solving</a></p>
+              <p><a>Python programming language</a></p>
+              <p><a>SQL (structured query language)</a></p>
+              <p><a>Tech stack</a></p>
+          </div>
+          <br>
+
+          <div class="in_menu">
+            <h1>Find me on:</h1>
+            <p><a href="https://github.com/usmanmusa1920">Github</a></p>
+            <p><a href="https://linkedin.com/in/usmanmusa1920">Linkedin</a></p>
+            <p><a href="https://facebook.com/usmanmu1920">Facebook</a></p>
+            <p><a href="https://hub.docker.com/u/usmanmusa">Duckerhub</a></p>
+          </div>
+          <br>
+          
+          <div class="menu_links">
+            <p><a>Login <small>(admin only)</small></a></p>
+          </div>
+          <br>
+
+          <form method="post" action="#" class="message">
+            <input type="hidden" name="csrfmiddlewaretoken" value="Qn5P5RUuscN3ZzrOKNVkV2YswU3bpdfoCfafUHyJhVssfG4hhAPpmE0rZ2pGTYN9">
+            <h1>Send your message:</h1>
+            <input type="text" name="full_name" placeholder="Your full name" required>
+            <input type="email" name="email" placeholder="Your email address" required>
+            <textarea name="text_body" placeholder="Type your message here ..." required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    <span onclick="hideMenu()">
+      <div class="banner">
+        <div class="banner_column">
+          <h1>Usman Musa</h1>
+          <br>
+          <br>
+          <p>Looking forward to IT and software development sector, to work, change and innovate creative digital system together with IT ally.</p>
+          <br>
+          <br>
+          <a href="http://github.com/usmanmusa1920/dipense">DiPense</a>
+        </div>
+      </div>
+
+      <div class="dark">
+        <div class="posts">
+          <div class="side_left">
+            <div class="post">
+              <h1><a>Mysql assignment</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 26, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ structured query language</a></small>
+              <hr>
+              <br>
+              <p>
+                Explain in details what does the following command do? And make a new commands with error free if the current command encoutered error.
+                <br>
+                create table mytab (name char(10) NULL, age number(3) default 'none supplied', address varchar(20), primary key (name));
+                <br>
+                <br>
+                <strong>Answer:</strong>
+                <br>
+                The command is trying to create a table in a database with a name called `mytab`, which includes 4 entities (fields) for each record, they are (name, age, address, and primary key). But this command is invalid because, if we look after `age` in the command there is `number(3)' which will give us an error it suppose to be `int`, and also a default value of 'none supplied' which is not suppose to be, why? because age suppose to be in `integer` data type, but the default there is in `char` data type, so we have to change it to be integer like 10, 255 or any integer value not decimal.
+                <br>
+                <br>
+                Also, `primary key (name)` is invalid, because primary key are suppose to be integer and also auto increment in some cases, this primary key sometimes even if we negate it, the db will populate it automatically, so the correct is to give our `primary key` as primary key (age) since age is in integer data type.
+                <br>
+                <br>
+                Lastly, the correct command suppose to be:
+              </p>
+              <div class="c_div">
+                <pre><small><code>CREATE TABLE mytab(
+  name char(10) NULL, age int default 12,
+  address varchar(20), primary key (age)
+);</code></small></pre>
+              </div>
+              <br>
+            </div>
+
+            <div class="post">
+              <h1><a>Assignment 1</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 07, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ computer programming 1</a></small>
+              <hr>
+              <br>
+              <p>
+                Write a C program to read the values of a, b and c and display the value of x, where
+X=a/b-c
+enable your program to accept input from user
+Test your program for the following values:
+              </br>
+            </br>
+a) a= 250, b= 85 c= 25
+<br>
+b) a= 300 b=70 c=70
+</br>
+</br>
+<a href="https://github.com/usmanmusa1920/problem_solving/blob/master/csc_201_activity/assignment_1.c" style="color:dodgerblue; ">Assignment 1 code file</a>
+</br>
+<a href="static/assignment_1" style="color:dodgerblue; ">Assignment 1 executable file</a>
+              </p>
+              <br>
+              <div class="c_div">
+                <pre><small><code>#include < stdio.h>
+
+int main(){
+int a;
+int b;
+int c;
+float X;
+float sub; // this will store value of `b - c`
+
+printf("Enter value of a: ");
+scanf("%d", &a);
+
+printf("Enter value of b: ");
+scanf("%d", &b);
+
+printf("Enter value of c: ");
+scanf("%d", &c);
+
+sub = b - c; // subtracting `c value` from `b value`
+X = a / sub;
+printf("The value of X is: %f\n", X);
+
+return 0;
+}
+
+/*
+a) a= 250, b= 85 c= 25
+b) a= 300 b=70 c=70
+*/</code></small></pre>
+              </div>
+              <br>
+            </div>
+          
+            <div class="post">
+              <h1><a>Assignment 2</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 07, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ computer programming 1</a></small>
+              <hr>
+              <br>
+              <p>
+                Write a program C that will ask for a temperature in Fahrenheit and display it in
+Celsius, enable your program to accept input from user.
+</br>
+</br>
+<a href="https://github.com/usmanmusa1920/problem_solving/blob/master/csc_201_activity/assignment_2.c" style="color:dodgerblue; ">Assignment 2 code file</a>
+</br>
+<a href="static/assignment_2" style="color:dodgerblue; ">Assignment 2 executable file</a>
+              </p>
+              <br>
+              <div class="c_div">
+                <pre><small><code>#include < stdio.h>
+
+int main(){
+float step_1;
+float step_2;
+float step_3;
+float Tf; // Tf means temprature in fahrenheit
+
+printf("Enter temprature scale in fahrenheit: ");
+scanf("%f", &Tf);
+// 32 degree fahrenheit is equal to 0 degree celsius
+
+step_1 = Tf - 32; // minusing 32 from temprature-in-fahrenheit
+step_2 = step_1 * 5; // timesing `step_1` with 5
+step_3 = step_2 / 9; // dividing `step_2` with 9
+
+printf("The conversion of %f fahrenheit to celsius is:\n\t%f celsius degree\n", Tf, step_3);
+return 0;
+}</code></small></pre>
+              </div>
+              <br>
+            </div>
+          
+            <div class="post">
+              <h1><a>Assignment 3</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 07, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ computer programming 1</a></small>
+              <hr>
+              <br>
+              <p>
+                Write a program to read a matrix of size m x n from the keyboard and display the
+same on the screen, enable your program to accept input from user
+</br>
+</br>
+<a href="https://github.com/usmanmusa1920/problem_solving/blob/master/csc_201_activity/assignment_3.c" style="color:dodgerblue; ">Assignment 3 code file</a>
+</br>
+<a href="static/assignment_3" style="color:dodgerblue; ">Assignment 3 executable file</a>
+              </p>
+              <br>
+              <div class="c_div">
+                <pre><small><code>#include < stdio.h>
+
+#define MAXROW 10
+#define MAXCOL 10
+
+int main(){
+int matrix[MAXROW][MAXCOL];
+int i, j;
+int m = 3, n = 3;
+
+printf("\nEnter matrix elements :\n");
+for(i = 0; i < m; i++){
+  for(j = 0; j < n; j++){
+    printf("Enter element [%d, %d] : ",i + 1, j + 1);
+    scanf("%d", &matrix[i][j]);
+  }
+}
+
+printf("\nThe matrix is :\n");
+for(i = 0; i < m; i++){
+  for(j = 0; j < n; j++){
+    printf("%d\t", matrix[i][j]);
+  }
+  printf("\n"); // new line after row elements
+}
+return 0;
+}</code></small></pre>
+              </div>
+              <br>
+            </div>
+          
+            <div class="post">
+              <h1><a>Assignment 4</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 07, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ computer programming 1</a></small>
+              <hr>
+              <br>
+              <p>
+                Write a C program to swap numbers, enable your program to accept input from user.
+              </br>
+              </br>
+                                <a href="https://github.com/usmanmusa1920/problem_solving/blob/master/csc_201_activity/assignment_4.c" style="color:dodgerblue; ">Assignment 4 code file</a>
+                              </br>
+                            <a href="static/assignment_4" style="color:dodgerblue; ">Assignment 4 executable file</a>
+              </p>
+              <br>
+              <div class="c_div">
+                <pre><small><code>#include < stdio.h>
+
+int main(){
+int a, b;
+int c; // we use this variable to briefly store a value
+
+printf("Enter first number: ");
+scanf("%d", &a);
+
+printf("Enter second number: ");
+scanf("%d", &b);
+
+printf("\nYou entered `%d, %d` (a and b) respectively\n", a, b);
+printf("Values before swap are:\n\ta = %d\n\tb = %d\n", a, b);
+
+// swapping numbers of `a` and `b`
+a = a + b;
+b = a - b;
+a = a - b;
+
+printf("Values after swap are:\n\ta = %d\n\tb = %d\n", a, b);
+
+return 0;
+}</code></small></pre>
+              </div>
+              <br>
+            </div>
+          
+            <div class="post">
+              <h1><a>Assignment 5</a></h1>
+              <img src="static/media/me_1.jpg" class="banner_column_img" alt="">
+              <small>Date created: since december 07, 2022 by <span>Usman Musa</span></small>
+              <br>
+              <small><a class="ref">@ computer programming 1</a></small>
+              <hr>
+              <br>
+              <p>
+                Write a C program to calculate area and circumference of a circle, enable your
+program to accept input from user
+</br>
+</br>
+<a href="https://github.com/usmanmusa1920/problem_solving/blob/master/csc_201_activity/assignment_5.c" style="color:dodgerblue; ">Assignment 5 code file</a>
+</br>
+<a href="static/assignment_5" style="color:dodgerblue; ">Assignment 5 executable file</a>
+              </p>
+              <br>
+              <div class="c_div">
+                <pre><small><code>#include < stdio.h>
+#include < math.h>
+
+int main(){
+float radius;
+float step_1;
+float step_2;
+float step_3;
+float step_4;
+
+printf("Enter circle radius: ");
+scanf("%f", &radius);
+
+// for area
+step_1 = 2 * M_PI;
+step_2 = radius * radius;
+step_3 = step_1 * step_2;
+printf("\tThe area of the circle is: %f\n", step_3);
+
+// for circumference
+step_4 = step_1 * radius;
+printf("\tThe circumference of the circle is: %f\n", step_4);
+return 0;
+}</code></small></pre>
+              </div>
+              <br>
+            </div>
+            
+            <div class="paginator">
+              <a href="#" class="page_current" onclick="alert('something went wrong')"><h3>1</h3></a>
+              <a href="#" class="page_number" onclick="alert('something went wrong')"><h3>2</h3></a>
+              <a href="#" class="page_number" onclick="alert('something went wrong')"><h3>3</h3></a>
+              <a href="#" class="page_number" onclick="alert('something went wrong')"><h3>4</h3></a>
+              <a>...</a>
+              <a href="#" class="page_surf" onclick="alert('something went wrong')"><h3>Next</h3></a>
+            </div>
+          </div>
+          
+          <div class="side_right">
+            <div class="cat">
+              <h1 class="s">Suggested for you!</h1>
+              
+              <!-- rand_1 -->
+              <h1><a >Operating sysytem</a></h1>
+              <small>Date created: since Jul 07, 2022 by <span>Usman Musa</span></small>
+              <hr>
+              <br>
+              
+              <p>LNUX is a family of open source unix like operating system based on the linux kernel. Linux was developed by Linux Torvalds in 1991, linux has many distributions these include debian, fedora, ubuntu, linux mint and others. Most web servers operating system are linux. Linux can runs on embeded system (devices whosse operating system is typically built-into the firmware) these includes routers, smartwatches, spacecraft, smart TV, etc. UNIX operating system is a set of programs that act as a link between the computer and the user. Unix was originally developed in 1969 by a group of AT&amp;T employees at Bell Labs, including Ken Thompson, Dennis Ritchie, Douglas Mcllroy, and Joe Ossanna. BASH is short for Bourne Again Shell, it was written by Steve Bourne as a replacement to the original Bourne Shell (represented by /bin/sh). It combines all the features from the original version of Bourne Shell, plus additional functions to make it easier and more convenient to use. It has since been adapted as the default shell for most systems running linux.</p>
+              
+              <div class="three_col">
+                <div>
+                  <img src="data:image/jpeg;base64,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" alt="">
+                </div>
+              </div>
+          
+              <!-- rand_1 -->
+              <h1><a >Database / SQL</a></h1>
+              <small>Date created: since Jul 17, 2022 by <span>Usman Musa</span></small>
+              <hr>
+              <br>
+
+              <p>Database is a separate application that stores a collection of data. Each database has one or more distinct APIs for creating, accessing, managing, searchin and replicating the data it holds. Other kinds of data stores can also be used, such as file system or large hash tables in memory but data fetching and writing would not be so fast and easy with those type of systems. There are alot of database exist, these includes: mysql, postgresql, sqlite, etc</p>
+              <div class="c_div">
+                <pre><small><code>CREATE DATABASE mydatabase;
+SHOW DATABASES;
+USE mydatabase;
+
+CREATE TABLE studens(
+(name VARCHR(255), admin_no INT AUTOINCREMENT, course VARCHAR(255))
+);
+
+SHOW TABLES;
+INSERT INTO mydatabase(name, admin_no, course) VALUES ("Jerry Tom", "202000012", "B.Sc computer/physics");
+
+SELECT * FROM students;
+</code></small></pre>
+              </div>
+          
+                <!-- rand_1 -->
+              <h1><a >Networking / Subnetting</a></h1>
+              <small>Date created: since Jul 20, 2022 by <span>Usman Musa</span></small>
+              <hr>
+              <br>
+              <p>Subnetting reduce the waste of an IP address in a network of an organisation or a company</p>
+              <div class="c_div">
+                <pre><small><code>ping 0.0.0.0
+nmap -sN 0.0.0.0</code></small></pre>
+              </div>
+            </div>
+
+            <div class="list">
+              <h1>Articles:</h1>
+              <ul>
+                <li>
+                  <p><a>HTML, CSS &amp; JS web development</a></p>
+                </li>
+              
+                <li>
+                  <p><a>Linux / Unix like OS &amp; Bash shell</a></p>
+                </li>
+              
+                <li>
+                  <p><a>Problem solving</a></p>
+                </li>
+              
+                <li>
+                  <p><a>Python programming language</a></p>
+                </li>
+              
+                <li>
+                  <p><a>SQL (structured query language)</a></p>
+                </li>
+              
+                <li>
+                  <p><a>Tech stack</a></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="ss">
+              <h1 class="s">Search Usman website</h1>
+              <form action="#" method="get" class="search" id="search">
+                <input type="search" name="search_q" placeholder="Search here" required>
+                <button type="submit">Search</button>
+              </form>
+            </div>
+
+            <form method="post" action="#" class="message">
+              <input type="hidden" name="csrfmiddlewaretoken" value="Qn5P5RUuscN3ZzrOKNVkV2YswU3bpdfoCfafUHyJhVssfG4hhAPpmE0rZ2pGTYN9">
+              <h1>Send your message:</h1>
+              <input type="text" name="full_name" placeholder="Your full name" required>
+              <input type="email" name="email" placeholder="Your email address" required>
+              <textarea name="text_body" placeholder="Type your message here ..." required></textarea>
+              <button type="submit">Send</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </span>
+    
+    <div class="main" onclick="hideMenu()">
+      <div class="main_column">
+        <div class="three_col">
+          <div>
+            <img src="static/media/google_map.webp" alt="">
+            <p>Your current location is <a class="peace"><b>some where in the world</b></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" onclick="hideMenu()">
+      <div class="foot_left">
+        <p>Have fun with programming and other IT related skills with Usman.</p>
+        <br>
+        <p>Usman is available for side collaborations, if you want web design, software development, or anything else in IT, don't hesitate in reaching out.</p>
+        <form>
+          <input type="search" name="" placeholder="Search here">
+          <button type="button">search</button>
+        </form>
+      </div>
+
+      <div class="foot_right">
+        <a href="#">Back to top</a>
+        <p>&copy; 2022 Usman Musa website</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
