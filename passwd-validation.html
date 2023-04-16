@@ -1,41 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title> Try It Yourself </title>
-</head>
-<body>
-   <textarea id="area"> Type your message... </textarea>
-   <p> Click the <b>textarea</b> then click outside to see the effect. </p>
-   <h1 id="pp"></h1>
-   
-   <input type="text" name="in" id="Password" placeholder="Password" />
-   
-   <input type="text" name="in" id="Passwordw" onkeyup="kp(this)" placeholder="Password again" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Try It Yourself </title>
 
-   <script>
-   
-   p = document.getElementById('Password')
-   ppp = document.getElementById('Passwordw').value
-   
-   function kp(elem){
-     if (elem.value != p.value || p.value != elem.value){
-       document.getElementById('pp').innerText = 'wrong password'
-     }
-     
-     else{
-       document.getElementById('pp').innerText = 'Good password'
-     }
-   }
-   
-      var area = document.getElementById("area");
+  <style>
+    body{
+      background: whitesmoke;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Client password validation</h1>
+  <textarea id="area"> Type your message... </textarea>
+  <p> Click the <b>textarea</b> then click outside to see the effect. </p>
+  <h2 id="pp"></h2>
+
+  <input type="text" name="in" id="Password" placeholder="Password" value="man">
+  <input type="text" name="in" id="Passwordw" onkeyup="kp(this)" placeholder="Password again" value="man">
+
+  <script>
+      p = document.getElementById('Password')
+      ppp = document.getElementById('Passwordw').value
       
+      function kp(elem){
+        if (elem.value != p.value || p.value != elem.value){
+          document.getElementById('pp').innerText = 'wrong password'
+          document.getElementById('pp').style.color = 'red'
+          document.getElementById('pp').style.border = 'solid red 1px'
+          document.getElementById('pp').style.display = 'flex'
+          document.getElementById('pp').style.justifyContent = 'center'
+        }
+         
+        else{
+          document.getElementById('pp').innerText = 'Good password'
+          document.getElementById('pp').style.color = 'green'
+          document.getElementById('pp').style.border = 'solid green 1px'
+          document.getElementById('pp').style.display = 'flex'
+          document.getElementById('pp').style.justifyContent = 'center'
+        }
+      }
+
+      var area = document.getElementById("area");
       area.addEventListener("focus", function() {
-         area.style.cssText = "background:yellow";
+        area.style.cssText = "background:yellow";
       });
       
       area.addEventListener("blur", function() {
-          area.style.background = "white";
+        area.style.background = "white";
       });
-   </script>
+  </script>
 </body>
 </html>
