@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Hire Us
+{% endblock title %}
+
+
+{% block main %}
+  <div class="main">
+    <!-- Nothing here, just to get a margin top -->
+  </div>
+  <div class="highlight">
+    <div class="menu_div" id="menu_div">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'hire_us' %}">Hire Us</a>
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+    </div>
+    <div class="highlight_inn">
+      <h1>Hire Us</h1>
+      <p>You can hire us for your home, office, or other place door and window work @ King's choice aluminum fabrication and glass products.</p>
+      <img src="{% static 'woman-open-window-looking-to-nature-woman-open-window-looking-to-nature-view-127215742.jpg' %}" alt="">
+      <img src="{% static 'design.jpg' %}" alt="">
+      <p>King's choice aluminum fabrication and glass products, provide you a good window solution for your home, offices, and your other dwelling places. We are about to fix your home window with a very low cost</p>
+      <a href="{% url 'contact_us' %}" class="update">Contact Us</a>
+    </div>
+  </div>
+  <br>
+{% endblock main %}

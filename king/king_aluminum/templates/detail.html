@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Post detail
+{% endblock title %}
+
+
+{% block main %}
+  <div class="main">
+    <!-- Nothing here, just to get a margin top -->
+  </div>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="highlight">
+        <div class="alert_{{message.tags}}">
+          <p>{{message}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+  <div class="highlight">
+    <div class="menu_div" id="menu_div">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'hire_us' %}">Hire Us</a>
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+    </div>
+    <div class="detail">
+      {% if post.title %}
+        {% if post.title == None %}
+          <!-- pass -->
+        {% else %}
+          <h1>{{post.title}}</h1>
+        {% endif %}
+      {% endif %}
+      <small>Posted on: <span>{{post.pub_date|date:'F, j Y'}}</span></small>
+      {% if post.image %}
+        {% if post.image == None %}
+          <!-- pass -->
+        {% else %}
+          <div class="img_div_detail">
+            <img src="{{post.image.url}}" alt="">
+          </div>
+        {% endif %}
+      {% endif %}
+      <br>
+      {% if post.image_url %}
+        {% if post.image_url == None %}
+          <!-- pass -->
+        {% else %}
+          <div class="img_div_detail">
+            <img src="{{post.image_url}}" alt="">
+          </div>
+        {% endif %}
+      {% endif %}
+
+      {% if post.summary %}
+        <p>{{post.summary}}</p>
+      {% endif %}
+      {% if request.user == post.author %}
+        <a href="{% url 'post_update_text' post.id %}" class="update">Update post</a>
+        <a href="{% url 'post_update_img' post.id %}" class="update">Update post image</a>
+        <br>
+        <a href="{% url 'post_delete' post.id %}" class="delete">Delete post</a>
+      {% endif %}
+    </div>
+  </div>
+  {% if comments %}
+    <div class="highlight">
+      <div class="no_notify">
+        <h4>Post comments</h4>
+      </div>
+    </div>
+  {% endif %}
+  <div class="some_info">
+    <div class="other">
+      {% if comments %}
+        <div class="post_home_2">
+          {% for comment in comments %}
+            <h1>Name: {{comment.full_name}}</h1>
+            <h1>Email: {{comment.email}}</h1>
+            <small>Posted on: <span>{{comment.timestamp|date:'F, j Y'}}</span></small>
+            <p>{{comment.text_body}}</p>
+            <br>
+            <br>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="highlight">
+          <div class="no_notify">
+            <h4>No comment yet</h4>
+          </div>
+        </div>
+      {% endif %}
+      <div class="post_home">
+        <div class="form_post">
+          <h1>Drop a comment</h1>
+          <form method="POST">
+            {% csrf_token %}
+            {% if request.user.is_authenticated %}
+              <input type="text" name="full_name" placeholder="Full name" value="{{request.user.first_name}} {{request.user.last_name}}" required>
+              <input type="email" name="email" placeholder="Email address" value="{{request.user.email}}" required>
+            {% else %}
+              <input type="text" name="full_name" placeholder="Full name" required>
+              <input type="email" name="email" placeholder="Email address" required>
+            {% endif %}
+            <textarea name="text_body" placeholder="Write a comment" cols="30" rows="10" required></textarea>
+            <button type="submit">Comment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if comments.paginator.count > 5 %}
+    <div class="highlight">
+      <div class="detail">
+        <div class="paginator">
+          {% if comments.has_previous %}
+            <a href="?page={{comments.previous_page_number}}" class="page_surf"><h3>Previous</h3></a>
+            <a>...</a>
+          {% endif %}
+          {% for num in comments.paginator.page_range %}
+            {% if comments.number == num %}
+              <a href="?page={{num}}" class="page_current"><h3>{{num}}</h3></a>
+            {% elif num > comments.number|add:'-4' and num < comments.number|add:'4' %}
+              <a href="?page={{num}}" class="page_number"><h3>{{num}}</h3></a>
+            {% endif %}
+          {% endfor %}
+          {% if comments.has_next %}
+            <a>...</a>
+            <a href="?page={{comments.next_page_number}}" class="page_surf"><h3>Next</h3></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <br>
+{% endblock main %}

@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Notification
+{% endblock title %}
+
+
+{% block main %}
+  <div class="main">
+    <!-- Nothing here, just to get a margin top -->
+  </div>
+  {% if messages %}
+    <div class="highlight">
+      <div class="menu_div" id="menu_div">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'hire_us' %}">Hire Us</a>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+      </div>
+      <div class="highlight_inn">
+        <h1>Messages sent to you here</h1>
+        <a href="{% url 'mark_messages' %}" class="update">Mark all messages as read</a>
+      </div>
+    </div>
+    {% for message in messages %}
+      <div class="highlight">
+        <div class="detail">
+          <h2>Name: {{message.full_name}}</h2>
+          {% if message.email == None %}
+            <h3>Email: -----</h3>
+          {% else %}
+            <h3>Email: {{message.email}}</h3>
+          {% endif %}
+          <h3>Phone: {{message.phone}}</h3>
+          <small>Since on: <span>{{message.timestamp|date:'F, j Y'}}</span></small>
+          <br>
+          <h2>Message:</h2>
+          <p>{{message.text_body}}</p>
+          <br>
+          <a href="{% url 'mark_message' message.id %}" class="update">Mark message as read</a>
+          <br>
+          <a href="{% url 'delete_message' message.id %}" class="delete">Delete message</a>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+
+    <div class="highlight">
+      <div class="detail">
+        {% if messages.paginator.count > 5 %}
+          <div class="paginator">
+            {% if messages.has_previous %}
+              <a href="?page={{messages.previous_page_number}}" class="page_surf"><h3>Previous</h3></a>
+              <a>...</a>
+            {% endif %}
+            {% for num in messages.paginator.page_range %}
+              {% if messages.number == num %}
+                <a href="?page={{num}}" class="page_current"><h3>{{num}}</h3></a>
+              {% elif num > messages.number|add:'-4' and num < messages.number|add:'4' %}
+                <a href="?page={{num}}" class="page_number"><h3>{{num}}</h3></a>
+              {% endif %}
+            {% endfor %}
+            {% if messages.has_next %}
+              <a>...</a>
+              <a href="?page={{messages.next_page_number}}" class="page_surf"><h3>Next</h3></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="highlight">
+      <div class="no_notify">
+        <h4>No new message sent here</h4>
+      </div>
+    </div>
+    <br>
+  {% endif %}
+
+  {% if comments %}
+    <div class="highlight">
+      <div class="highlight_inn">
+        <h1>Comment for your post here</h1>
+        <a href="% url 'mark_comments' %}" class="update">Mark all comments as read</a>
+      </div>
+    </div>
+    {% for comment in comments %}
+      <div class="highlight">
+        <div class="detail">
+          <h2>Name: {{comment.full_name}}</h2>
+          <h3>Email: {{comment.email}}</h3>
+          <h3>Phone: {{comment.phone}}</h3>
+          <small>Since on: <span>{{comment.timestamp|date:'F, j Y'}}</span></small>
+          <br>
+          <h2>Message:</h2>
+          <p>{{comment.text_body}}</p>
+          <br>
+          <a href="{% url 'mark_comment' comment.id %}" class="update">Mark comment as read</a>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+
+    <div class="highlight">
+      <div class="detail">
+        {% if comments.paginator.count > 5 %}
+          <div class="paginator">
+            {% if comments.has_previous %}
+              <a href="?page={{comments.previous_page_number}}" class="page_surf"><h3>Previous</h3></a>
+              <a>...</a>
+            {% endif %}
+            {% for num in comments.paginator.page_range %}
+              {% if comments.number == num %}
+                <a href="?page={{num}}" class="page_current"><h3>{{num}}</h3></a>
+              {% elif num > comments.number|add:'-4' and num < comments.number|add:'4' %}
+                <a href="?page={{num}}" class="page_number"><h3>{{num}}</h3></a>
+              {% endif %}
+            {% endfor %}
+            {% if comments.has_next %}
+              <a>...</a>
+              <a href="?page={{comments.next_page_number}}" class="page_surf"><h3>Next</h3></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% else %}
+    <div class="highlight">
+      <div class="no_notify">
+        <h4>No new comment here</h4>
+      </div>
+    </div>
+    <br>
+  {% endif %}
+{% endblock main %}

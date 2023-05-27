@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  choice aluminum fabrication and glass products
+{% endblock title %}
+
+
+{% block main %}
+<div class="main">
+  <div class="main_column">
+    <div class="menu_div" id="menu_div">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'hire_us' %}">Hire Us</a>
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+    </div>
+    <div class="left_main">
+      <h1>King's choice aluminum fabrication and glass products</h1>
+      <p>
+        We provide you a window solution, we shape and activate brands through insight, vision and execution.
+      </p>
+      <a href="#" class="contact">Get in touch</a>
+    </div>
+    <div class="right_main">
+      <div class="round_img">
+        <img src="{% static 'aluminum-7.jpg' %}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+  <br>
+  <div class="highlight">
+    <div class="highlight_inn">
+      <h1>Get a window solution here</h1>
+      <img src="{% static 'beautiful-girl-looks-out-open-window-advertising-new-windows-prestigious-summer-sunlight-woman-to-outside-look-autdoor-168182272.jpg' %}" alt="">
+      <h3>King's choice aluminum fabrication and glass products, provide you a good window solution for your home, offices, and your other dwelling places.</h3>
+    </div>
+  </div>
+  
+  <div class="some_info">
+    <div class="other">
+      <div class="post_home">
+        {% if posts %}
+          {% for post in posts %}
+            {% if post.title %}
+              {% if post.title == None %}
+                <a href="{% url 'post_detail' post.id %}" class="r_more">See detail</a>
+                <br>
+              {% else %}
+                <a href="{% url 'post_detail' post.id %}" class="article">
+                  <h1>{{post.title}}</h1>
+                </a>
+              {% endif %}
+            {% else %}
+              <a href="{% url 'post_detail' post.id %}" class="r_more">See detail</a>
+              <br>
+            {% endif %}
+            <small>Posted on: <span>{{post.pub_date|date:'F, j Y'}}</span></small>
+            {% if post.image %}
+              {% if post.image == None %}
+                <!-- pass -->
+              {% else %}
+                <div class="post_img">
+                  <img src="{{ post.image.url }}" alt="">
+                </div>
+              {% endif %}
+            {% endif %}
+            {% if post.image_url %}
+              {% if post.image_url == None %}
+                <!-- pass -->
+              {% else %}
+                <div class="post_img">
+                  <img src="{{post.image_url}}" alt="">
+                </div>
+              {% endif %}
+            {% endif %}
+            
+            {% if post.summary %}
+              {% if post.summary|length >= 220 %}
+                <p>{{post.summary|truncatechars:200}}</p>
+                <a href="{% url 'post_detail' post.id %}" class="r_more">Read more ...</a>
+              {% else %}
+                <p>{{post.summary}}</p>
+              {% endif %}
+            {% endif %}
+            <br>
+            <br>
+          {% endfor %}
+        {% else %}
+        <div class="highlight">
+          <div class="no_notify">
+            <h4>There is no post in this website</h4>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if posts.paginator.count > 5 %}
+          <div class="paginator">
+            {% if posts.has_previous %}
+              <a href="?page={{posts.previous_page_number}}" class="page_surf"><h3>Previous</h3></a>
+              <a>...</a>
+            {% endif %}
+            {% for num in posts.paginator.page_range %}
+              {% if posts.number == num %}
+                <a href="?page={{num}}" class="page_current"><h3>{{num}}</h3></a>
+              {% elif num > posts.number|add:'-4' and num < posts.number|add:'4' %}
+                <a href="?page={{num}}" class="page_number"><h3>{{num}}</h3></a>
+              {% endif %}
+            {% endfor %}
+            {% if posts.has_next %}
+              <a>...</a>
+              <a href="?page={{posts.next_page_number}}" class="page_surf"><h3>Next</h3></a>
+            {% endif %}
+          </div>
+        {% endif %}
+        <br>
+      </div>
+
+      <div class="post_home_2">
+        <div class="highlight">
+          <div class="highlight_inn">
+            <h1>Our service</h1>
+            <img src="{% static 'Aluminum-Fabrication-of-Windows-and-Doors.jpg' %}" alt="">
+            <p>Well design and long life products</p>
+          </div>
+        </div>
+        <br>
+        
+        <h1 class="p_head">Good apparatus make work easy</h1>
+        <div class="post_img">
+          <img src="{% static 'expert.jpg' %}" alt="">
+        </div>
+        <p>Simplify your work and team mate with a good and simple tool</p>
+        <br>
+        
+        <h1 class="p_head">Have an awesome windoor now!</h1>
+        <div class="post_img">
+          <img src="{% static 'sliding-door-300x300.jpg' %}" alt="">
+        </div>
+        <p>
+          Your house, office, hotel, need us
+          <a href="{% url 'contact_us' %}" class="update">Get to us</a></p>
+        <br>
+
+        <h1 class="p_head">Wow you'r just for this!</h1>
+        <div class="post_img">
+          <img src="{% static 'download.jpeg' %}" alt="">
+        </div>
+        <p>For internal environment</p>
+        <br>
+
+        <h1 class="p_head">Service frame</h1>
+        <div class="post_img">
+          <img src="{% static 'aluminium-fabrication.webp' %}" alt="">
+          <img src="{% static '4-Aluminum-Fabrication.jpg' %}" alt="">
+        </div>
+        <p>You can <a href="{% url 'contact_us' %}" class="update">get to us</a> now!</p>
+      </div>
+    </div>
+  </div>
+{% endblock main %}

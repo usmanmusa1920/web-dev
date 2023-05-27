@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  Contact Us
+{% endblock title %}
+
+
+{% block main %}
+  <div class="main">
+    <!-- Nothing here, just to get a margin top -->
+  </div>
+  {% if messages %}
+    {% for message in messages %}
+      <div class="highlight">
+        <div class="alert_{{message.tags}}">
+          <p>{{message}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+  <div class="highlight">
+    <div class="menu_div" id="menu_div">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'hire_us' %}">Hire Us</a>
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+    </div>
+    <div class="form_post">
+      <h1>Send message here</h1>
+      <p>Send us a message for hiring, something related to our service, or other thing here</p>
+      <form method="POST" action="{% url 'message' %}">
+        {% csrf_token %}
+        <input type="text" name="full_name" placeholder="Full name" required>
+        <input type="phone" name="phone" placeholder="Phone number" required>
+        <input type="email" name="email" placeholder="Email address (optional)">
+        <textarea name="text_body" placeholder="Write message here..." cols="30" rows="10" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <br>
+      <div class="detail">
+        <h2>Contact us: +2347035545717</h2>
+        <h3>Email us: omoniyibenjamin212@gmail.com</h3>
+        <h3>Address: Abuja, Lugbe, Pyakasa Shop 2 Close to Living Faith Church</h3>
+      </div>
+    </div>
+  </div>
+{% endblock main %}

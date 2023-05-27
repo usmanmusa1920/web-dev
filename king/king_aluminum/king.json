@@ -1,0 +1,621 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-07-28T08:30:37.239Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "King",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-07-29T12:30:48.646Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "Post number 2 by King on 2022-07-28 18:52:12+00:00",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image url\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-08-03T01:00:39.732Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "2",
+        "object_repr": "King",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user account",
+        "content_type": 6,
+        "codename": "add_useraccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user account",
+        "content_type": 6,
+        "codename": "change_useraccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user account",
+        "content_type": 6,
+        "codename": "delete_useraccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user account",
+        "content_type": 6,
+        "codename": "view_useraccount"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add message",
+        "content_type": 7,
+        "codename": "add_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change message",
+        "content_type": 7,
+        "codename": "change_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete message",
+        "content_type": 7,
+        "codename": "delete_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view message",
+        "content_type": 7,
+        "codename": "view_message"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add post",
+        "content_type": 8,
+        "codename": "add_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change post",
+        "content_type": 8,
+        "codename": "change_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete post",
+        "content_type": 8,
+        "codename": "delete_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view post",
+        "content_type": 8,
+        "codename": "view_post"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add comment",
+        "content_type": 9,
+        "codename": "add_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change comment",
+        "content_type": 9,
+        "codename": "change_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete comment",
+        "content_type": 9,
+        "codename": "delete_comment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view comment",
+        "content_type": 9,
+        "codename": "view_comment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "account",
+        "model": "useraccount"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "account",
+        "model": "message"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "blog",
+        "model": "post"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "blog",
+        "model": "comment"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1ylnrwuy571yy9cms3i7i06cy512qd6z",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlmJHf8o6TmDtd5d4wCypTipEHeHSCmgfTPzXiLCtpa4dV7iTOIslDj9bgnwwXUHdId6axJbXZc5yV2RB-3y2oifl8P9OyjQy7cOA2vvRqtCsmHMxuQpsbaI2gSXBmscT6yyI-asvA9gNUFC9p41kgXx_gDVJzhZ:1oJT0A:UfnhLR3lefFamuI1ug6D0OauncmjY-awuhO1vJo8kiA",
+        "expire_date": "2022-08-18T05:02:30.535Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "90lbf65lyvyofde24vrew8j6p44fwavc",
+    "fields": {
+        "session_data": ".eJxVjM0OwiAQhN-FsyEsUrZ49O4zkF3YStVA0p-T8d1tkx70OPN9M28VaV1KXGeZ4pjVRYE6_XZM6Sl1B_lB9d50anWZRta7og8661vL8roe7t9Bobls69CjQecAssuuA3HWmESIgta7sMVzR95yDwMHQEIG7gYBIQmQPFv1-QKvIjc6:1oNVcz:IkjUZgTTHnHGRtsKtMWd5xEsTp3PWwtzGecNynhbJZM",
+        "expire_date": "2022-08-29T08:39:17.295Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ce9atiw3vqkunsnrzvor0c6k7ewr7ayr",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSECMzxcuvcbCDBTqRqalHZl_HdD0oVu7znnvkVM-1bj3nmNM4mLUOL0u-VUntwGoEdq90WWpW3rnOVQ5EG7vC3Er-vh_h3U1OuoHRoiRq29QYYAhGRIT6UgEIdii5oCekVsnQK2HuBs2BlUPhDnLD5f6H837w:1oGysR:GUmqc89l_qZQgxcwY1zOmiA6MvwXaOwzhRv_tD-bp34",
+        "expire_date": "2022-08-11T08:28:15.207Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j69wez3xrmj6ulwn41ihghb7nhgb6fgp",
+    "fields": {
+        "session_data": ".eJxVjM0OwiAQhN-FsyEsUrZ49O4zkF3YStVA0p-T8d1tkx70OPN9M28VaV1KXGeZ4pjVRYE6_XZM6Sl1B_lB9d50anWZRta7og8661vL8roe7t9Bobls69CjQecAssuuA3HWmESIgta7sMVzR95yDwMHQEIG7gYBIQmQPFv1-QKvIjc6:1oHA3i:Ugajw9bxuZ4e1S7N9amRkGTpl3o63lYAiI_pPc_1gZA",
+        "expire_date": "2022-08-11T20:24:38.967Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "keekulbdlczpc6ill9zqi5npffcy4sht",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pAZqhRcuvcMZGAGqRpISrsy3l2bdKHb_977LxVoXUpYu8xhYnVWRh1-t0jpIXUDfKd6azq1usxT1Juid9r1tbE8L7v7d1Col299ct4cmfLAThwKjmA8RGbIlgexlhgTgoCMmSJlF9F7BgQ0xvk0oHp_AO2aN_I:1oGyw3:qbEMLu_WfvVRfyw4OKvlU0YOklYJ8XCVQQEjUdPOaYI",
+        "expire_date": "2022-08-11T08:31:59.607Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o53rhqcyhbgsjefrt7ws8aeyjzfr2e6o",
+    "fields": {
+        "session_data": ".eJxVjM0OwiAQhN-FsyEsUrZ49O4zkF3YStVA0p-T8d1tkx70OPN9M28VaV1KXGeZ4pjVRYE6_XZM6Sl1B_lB9d50anWZRta7og8661vL8roe7t9Bobls69CjQecAssuuA3HWmESIgta7sMVzR95yDwMHQEIG7gYBIQmQPFv1-QKvIjc6:1oH9ec:bq5-V_I50bVctp8MJc2djdm0tETmO_ZC4GFWbFglDPQ",
+        "expire_date": "2022-08-11T19:58:42.663Z"
+    }
+},
+{
+    "model": "account.useraccount",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$zwYIlCkGTQafAZKqYnUiBQ$C2a/mtS9NNRY32NubIwWmurVp+2Vu8EUR0xwMH3RDT8=",
+        "last_login": "2022-08-15T08:39:17.292Z",
+        "first_name": "Usman",
+        "last_name": "Musa",
+        "username": "Shehu",
+        "email": "usmanmusa1920@gmail.com",
+        "image_url": null,
+        "is_active": true,
+        "is_staff": true,
+        "is_superuser": true
+    }
+},
+{
+    "model": "account.useraccount",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$dAQBEkhKtyuXkTZPWapX3A$yxOWDl3iIFhEfya8qoD6wNmm7omALr+6Y8jjO7EOkyc=",
+        "last_login": "2022-08-06T01:24:12.495Z",
+        "first_name": "Benjamin",
+        "last_name": "Omoniyi",
+        "username": "King",
+        "email": "omoniyibenjamin212@gmail.com",
+        "image_url": null,
+        "is_active": true,
+        "is_staff": false,
+        "is_superuser": false
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-07-28T08:37:06.723Z",
+        "last_modified": "2022-07-28T20:26:09.419Z",
+        "title": "Welcome to king aluminum favrication website",
+        "summary": "King's choice aluminum fabrication and glass products, provide you a good window solution for your home, offices, and your other dwelling places. We are about to fix your home window with a very low cost",
+        "image": "blog_post_pic/map.png",
+        "image_url": "https://king-aluminum.herokuapp.com/static/aluminium-fabrication-service-in-jaipur.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+        "author": 2,
+        "pub_date": "2022-07-28T18:52:12Z",
+        "last_modified": "2022-07-29T12:30:48.643Z",
+        "title": "Our service is organised",
+        "summary": "Well, always integrate new idea",
+        "image": "",
+        "image_url": "https://www.ams.ie/contentFiles/serviceImages/IMG06011.png"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-03T01:17:31.391Z",
+        "last_modified": "2022-08-03T01:18:32.544Z",
+        "title": "Your style is our choice",
+        "summary": "",
+        "image": "",
+        "image_url": "https://img.directindustry.com/images_di/photo-mg/223348-15723548.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-03T01:19:15.234Z",
+        "last_modified": "2022-08-03T01:19:15.234Z",
+        "title": null,
+        "summary": "",
+        "image": "",
+        "image_url": "https://kenneth.wonder-cdn.com/uploads/image/5f6c36f6b36a1.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-03T01:20:15.437Z",
+        "last_modified": "2022-08-03T01:20:15.437Z",
+        "title": null,
+        "summary": "",
+        "image": "",
+        "image_url": "https://5.imimg.com/data5/LX/EA/MY-25205415/aluminium-openable-window-500x500.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 6,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-03T01:21:46.189Z",
+        "last_modified": "2022-08-03T01:22:34.905Z",
+        "title": null,
+        "summary": "",
+        "image": "",
+        "image_url": "https://doors4security.us/wp-content/uploads/2018/02/detail6.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 8,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-15T08:42:01.804Z",
+        "last_modified": "2022-08-15T08:42:01.805Z",
+        "title": "Suitable doors for your interiors",
+        "summary": "",
+        "image": "",
+        "image_url": "https://guardian.ng/wp-content/uploads/2020/03/Door.jpg"
+    }
+},
+{
+    "model": "blog.post",
+    "pk": 9,
+    "fields": {
+        "author": 1,
+        "pub_date": "2022-08-15T08:51:18.481Z",
+        "last_modified": "2022-08-15T08:51:18.482Z",
+        "title": "For home and office",
+        "summary": "",
+        "image": "",
+        "image_url": "https://www.mymove.com/wp-content/uploads/2016/02/beautiful-window-boxes-flowersphotography-flowersphoto-flowerstalking-flowerday-flowersday_t20_mvzJ2r.jpg"
+    }
+}
+]
