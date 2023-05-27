@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js"></script>
+  <title>
+    Husain Abubakar - 
+    
+  Contact Me
+
+  </title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header_column">
+        <div class="left_header">
+          <h1 class="logo">
+            <a href="index.html">Husaini Abubakar</a>
+          </h1>
+        </div>
+        <div class="right_header">
+          <button class="menu" id="menu" onclick="menu_func()">Menu</button>
+          <button class="menu_hide" id="menu_hide" onclick="menu_hide_func()">Hide</button>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact Me</a>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  <div class="main">
+    <!-- Nothing here, just to get a margin top -->
+  </div>
+  
+  <div class="highlight">
+    <div class="menu_div" id="menu_div">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <div class="form_post">
+      <h1>Send me message</h1>
+      <form method="POST" action="#">
+        <input type="hidden" name="csrfmiddlewaretoken" value="BP7UBNaUA7Lw3oCE31LGr022drqmJdkaQlBHAYEsc3uZVHHxoGLd31tgItRGpXiI">
+        <input type="text" name="full_name" placeholder="Full name" required>
+        <input type="phone" name="phone" placeholder="Phone number" required>
+        <input type="email" name="email" placeholder="Email address (optional)">
+        <textarea name="text_body" placeholder="Write message here..." cols="30" rows="10" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <br>
+    </div>
+  </div>
+
+
+    <div class="foot">
+      <div class="foot_main">
+        <div class="left_foot">
+          <p>
+            Navigate here!
+          </p>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact Me</a>
+          
+          
+            <a href="#">Login</a>
+          
+        </div>
+        <div class="right_foot">
+          <img src="IMG-20220730-WA0000.jpg" alt="">
+          <a href="#" class="h_link">Back to home</a>
+          <p> Alright reserved &copy; 2023</p>
+          <p>Powered by <a target="_blank" href="https://www.usmanmusa.tk">Usman Musa</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

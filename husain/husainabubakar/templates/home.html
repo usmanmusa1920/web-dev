@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+  choice aluminum fabrication and glass products
+{% endblock title %}
+
+
+{% block main %}
+<div class="main">
+  <div class="main_column">
+    <div class="menu_div" id="menu_div">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'contact_me' %}">Contact Me</a>
+    </div>
+    <div class="left_main">
+      <h1>I am Husain Abubakar, but some call me dan soja</h1>
+      <p>Husaini Abubakar</p>
+      <a href="{% url 'contact_me' %}" class="contact">Get in touch</a>
+    </div>
+  </div>
+</div>
+  <br>
+  <div class="some_info">
+    <div class="other">
+      <div class="post_home">
+        {% if posts %}
+          {% for post in posts %}
+            {% if post.title %}
+              {% if post.title == None %}
+                <a href="{% url 'post_detail' post.id %}" class="r_more">See detail</a>
+                <br>
+              {% else %}
+                <a href="{% url 'post_detail' post.id %}" class="article">
+                  <h1>{{post.title}}</h1>
+                </a>
+              {% endif %}
+            {% else %}
+              <a href="{% url 'post_detail' post.id %}" class="r_more">See detail</a>
+              <br>
+            {% endif %}
+            <small>Posted on: <span>{{post.pub_date|date:'F, j Y'}}</span></small>
+            {% if post.image %}
+              {% if post.image == None %}
+                <!-- pass -->
+              {% else %}
+                <div class="post_img">
+                  <img src="{{ post.image.url }}" alt="">
+                </div>
+              {% endif %}
+            {% endif %}
+            {% if post.image_url %}
+              {% if post.image_url == None %}
+                <!-- pass -->
+              {% else %}
+                <div class="post_img">
+                  <img src="{{post.image_url}}" alt="">
+                </div>
+              {% endif %}
+            {% endif %}
+            
+            {% if post.summary %}
+              {% if post.summary|length >= 220 %}
+                <p>{{post.summary|truncatechars:200}}</p>
+                <a href="{% url 'post_detail' post.id %}" class="r_more">Read more ...</a>
+              {% else %}
+                <p>{{post.summary}}</p>
+              {% endif %}
+            {% endif %}
+            <br>
+            <br>
+          {% endfor %}
+        {% else %}
+        <div class="highlight">
+          <div class="no_notify">
+            <h4>There is no post in this website</h4>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if posts.paginator.count > 5 %}
+          <div class="paginator">
+            {% if posts.has_previous %}
+              <a href="?page={{posts.previous_page_number}}" class="page_surf"><h3>Previous</h3></a>
+              <a>...</a>
+            {% endif %}
+            {% for num in posts.paginator.page_range %}
+              {% if posts.number == num %}
+                <a href="?page={{num}}" class="page_current"><h3>{{num}}</h3></a>
+              {% elif num > posts.number|add:'-4' and num < posts.number|add:'4' %}
+                <a href="?page={{num}}" class="page_number"><h3>{{num}}</h3></a>
+              {% endif %}
+            {% endfor %}
+            {% if posts.has_next %}
+              <a>...</a>
+              <a href="?page={{posts.next_page_number}}" class="page_surf"><h3>Next</h3></a>
+            {% endif %}
+          </div>
+        {% endif %}
+        <br>
+      </div>
+
+      <div class="post_home_2">
+        <div class="highlight">
+          <div class="highlight_inn">
+            <h1>Vision</h1>
+            <img src="https://pbs.twimg.com/card_img/1550148599643869186/KE8cHbIw?format=jpg&name=medium" alt="">
+            <p>Secure your people by providing good arms to your security personel</p>
+          </div>
+        </div>
+        <br>
+        
+        <h1 class="p_head">Make an ease work by team work</h1>
+        <div class="post_img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI4AzSrzdRikUIA4R_mMcLk6aRwSFgRTNghg&usqp=CAU" alt="">
+        </div>
+        <p>Simplify your work and team mate with a good and simple idea</p>
+        <br>
+        
+        <h1 class="p_head">Am I good at mathematics?</h1>
+        <div class="post_img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQND8pHDobKTrtbw9niqzJONv_Ej0xNrz6LmQ&usqp=CAU" alt="">
+        </div>
+        <br>
+
+        <h1 class="p_head">Thinking positive</h1>
+        <div class="post_img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvCsHVO-knosORPCx3VtYGb3ZFWmF5SlQePw&usqp=CAU" alt="">
+        </div>
+        <p>You can <a href="{% url 'contact_me' %}" class="update">get to me</a> now!</p>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+{% endblock main %}

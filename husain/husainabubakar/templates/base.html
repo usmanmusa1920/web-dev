@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+  <script src="{% static 'home.js' %}"></script>
+  <title>
+    Husain Abubakar - 
+    {% block title %}
+      <!-- inheritance -->
+    {% endblock title %}
+  </title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header_column">
+        <div class="left_header">
+          <h1 class="logo">
+            <a href="{% url 'home' %}">Husaini Abubakar</a>
+          </h1>
+        </div>
+        <div class="right_header">
+          <button class="menu" id="menu" onclick="menu_func()">Menu</button>
+          <button class="menu_hide" id="menu_hide" onclick="menu_hide_func()">Hide</button>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'contact_me' %}">Contact Me</a>
+          {% if request.user.is_superuser == True %}
+            <a href="/69a9ab6c74950c387c76877bd9e5da2e9af3ce6741dd3f47908e648eaba865d2/" target="_blank">Admin</a>
+          {% endif %}
+          {% if request.user.is_authenticated %}
+            {% if count_1.count > 0 %}
+              <a href="{% url 'notification' %}">Notification</a>
+            {% elif count_2.count > 0 %}
+              <a href="{% url 'notification' %}">Notification</a>
+            {% endif %}
+          {% endif %}
+        </div>
+        {% if request.user.is_authenticated %}
+          {% if count_1.count > 0 %}
+            <a href="{% url 'notification' %}" class="msg_alert">+</a>
+          {% elif count_2.count > 0 %}
+            <a href="{% url 'notification' %}" class="msg_alert">+</a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+    {% block main %}
+      <!-- inheritance -->
+    {% endblock main %}
+
+    <div class="foot">
+      <div class="foot_main">
+        <div class="left_foot">
+          <p>
+            Navigate here!
+          </p>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'contact_me' %}">Contact Me</a>
+          {% if request.user.is_superuser == True %}
+            <a href="/5c4f0bfe442f90f3bd9b9f3419f04d162451b7c92682f9bacf46737dea190452" target="_blank">Admin</a>
+          {% endif %}
+          {% if request.user.is_authenticated %}
+            <a href="{% url 'new_post' %}">New post</a>
+            {% if count_1.count > 0 %}
+              <a href="{% url 'notification' %}">You have new notification</a>
+            {% elif count_2.count > 0 %}
+              <a href="{% url 'notification' %}">You have new notification</a>
+            {% else %}
+              <a href="{% url 'notification' %}">Notification</a>
+            {% endif %}
+            <a href="{% url 'change_password' %}">Change password</a>
+            <a href="{% url 'logout' %}">Logout</a>
+          {% else %}
+            <a href="{% url 'login' %}">Login</a>
+          {% endif %}
+        </div>
+        <div class="right_foot">
+          <img src="{% static 'IMG-20220730-WA0000.jpg' %}" alt="">
+          <a href="#" class="h_link">Back to home</a>
+          <p> Alright reserved &copy; {{the_year}}</p>
+          <p>Powered by <a target="_blank" href="https://www.usmanmusa.tk">Usman Musa</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
