@@ -147,7 +147,7 @@ body{
   margin-top: calc(100vh - 87.5vh);
   display: flex;
   justify-content: center;
-  background: white url('media/angle-grinder-vs-saw-1080x675-1-980x613.png') no-repeat center center/cover;
+  background: white url('../media/angle-grinder-vs-saw-1080x675-1-980x613.png') no-repeat center center/cover;
 }
 
 .main_column{

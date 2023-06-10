@@ -139,7 +139,7 @@ body{
   margin-top: calc(100vh - 87.5vh);
   display: flex;
   justify-content: center;
-  background: white url('media/3286319.jpg') no-repeat center center/cover;
+  background: white url('../media/3286319.jpg') no-repeat center center/cover;
 }
 
 .main_column{

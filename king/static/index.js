@@ -9,3 +9,9 @@ function menu_hide_func(){
   document.getElementById('menu_hide').style.display = 'none'
   document.getElementById('menu').style.display = 'block'
 }
+
+function this_year(){
+  // this function retrieve current year we are
+  var this_year = new Date();
+  document.getElementById("this_year").innerHTML = this_year.getFullYear();
+}
