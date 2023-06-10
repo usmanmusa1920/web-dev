@@ -139,7 +139,7 @@ body{
   margin-top: calc(100vh - 87.5vh);
   display: flex;
   justify-content: center;
-  background: white url('3286319.jpg') no-repeat center center/cover;
+  background: white url('media/3286319.jpg') no-repeat center center/cover;
 }
 
 .main_column{
@@ -567,8 +567,6 @@ body{
   }
 }
 
-
-
 /* For new post */
 .form_post{
   width: 70%;
@@ -631,8 +629,6 @@ body{
   color: white;
 }
 
-
-
 /* For detail */
 .detail{
   width: 70%;
@@ -687,8 +683,6 @@ body{
   color: red;
   text-decoration: underline;
 }
-
-
 
 /* for notificatio */
 .no_notify{

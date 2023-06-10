@@ -659,8 +659,6 @@ body{
   }
 }
 
-
-
 /* For new post */
 .form_post{
   width: 70%;
@@ -723,8 +721,6 @@ body{
   color: white;
 }
 
-
-
 /* For detail */
 .detail{
   width: 70%;
@@ -779,8 +775,6 @@ body{
   color: red;
   text-decoration: underline;
 }
-
-
 
 /* for notificatio */
 .no_notify{
