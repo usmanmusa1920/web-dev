@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome</h1>
+    {% if request.user.is_authenticated %}
+        You are logged in as {{ user }}.
+    {% else %}
+        You are not logged in.
+    {% endif %}
+
+    <ul>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'password_change' %}">Change password</a></li>
+            <li><a href="{% url 'logout' %}">Log out</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Log in</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    </ul>
+{% endblock %}
