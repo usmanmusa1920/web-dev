@@ -1,0 +1,40 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lol{
+  background: red;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.my_image{
+  width: auto;
+  height: 30vh;
+}
+
+.img{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp{
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  background: dodgerblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
